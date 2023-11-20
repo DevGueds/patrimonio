@@ -1,9 +1,0 @@
-INSERT INTO patrimonio.cadastro_usuario (nome,usuario,senha,permissao) VALUES
-	 ('Vinicius Guedes','viniguedes','12345','administrador'),
-	 ('Edcristo Gonçalves','edcristo','12345','administrador'),
-	 ('Paulo Vinicius','guedesvini','12345','usuario'),
-	 ('Ricardo Laurinho','ricardo','sms@capanema','administrador'),
-	 ('pedro igor','igor','12345','usuario'),
-	 ('Tomildes','Tom','54321','administrador'),
-	 ('Carla Lisboa Cruz','carla.cruz','12345','administrador'),
-	 ('','','','administrador');
