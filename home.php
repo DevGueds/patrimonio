@@ -10,7 +10,7 @@
   }
   $logado = $_SESSION['usuario'];
 
-  $sql = "SELECT * FROM cadastro_usuario ORDER BY id DESC";
+  $sql = "SELECT * FROM cadastro_usuario ORDER BY id_usuario DESC";
 
   $result = $conexao->query($sql);
 
