@@ -6,6 +6,21 @@
     <title>Acesso ao Sistema</title>
 </head>
 <body>
-    
+    <div class="login-principal">
+        <div class="login1">
+            <h1>Área para imagem da prefeitura</h1>
+        </div>
+        <div class="login2"></div>
+        <div class="area-login">
+            <div class="textfield">
+                <input type="text" name="usuario" placeholder="Usuário" required>
+            </div>
+            <div class="textfield">
+                <input type="password" name="senha" placeholder="Senha" required>
+            </div>
+            <button class="btn-login">Entrar</button>
+        </div>
+
+    </div>
 </body>
 </html>
