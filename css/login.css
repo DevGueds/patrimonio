@@ -1,10 +1,10 @@
 
 
-body{
+body {
     margin: 0;
 }
 
-.login-principal{
+.login-principal {
     width: 100vw;
     height: 100vh;
     background: #fff;
@@ -13,11 +13,23 @@ body{
     align-items: center;
 }
 
-.login-esquerda{
+.login-esquerda {
     width: 50vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.login-esquerda > h1 {
+    color: #394475;
+}
+
+.login-direita {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
