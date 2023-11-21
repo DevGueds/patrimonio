@@ -43,3 +43,34 @@ body {
     padding: 30px 35px;
     background-color: #f8f8f8 ;
 }
+
+.area-login > h1{ /* Falta definir a margem e o peso da fonte*/
+    color: #26324B;
+}
+
+.textfield{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.textfield > input{ /*Configuração do input - Falta definir o tamanho da fonte*/ 
+    width: 100%;
+    border: solid 2px #E5EBF1 ;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fff;
+    color: 7B828D;
+}
+
+.btn-login{
+    width: 50%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    background: #274A9D;
+    color: #fff;
+}
