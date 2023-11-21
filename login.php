@@ -13,6 +13,18 @@
         <div class="login-esquerda">
             <h1>SISTEMA DE GERENCIAMENTO <br>DE PAGAMENTO</h1>
         </div>
+        <div class="login-direita">
+            <div class="area-login">
+                <h1>ENTRAR</h1>
+                <div class="textfield">
+                    <input type="text" name="usuario" placeholder="Usuário">
+                </div>
+                <div class="textfield">
+                    <input type="password" name="senha" placeholder="Senha">
+                </div>
+                <button class="btn-login">Entrar</button>
+            </div>
+        </div>
     </div>
 </body>
 
