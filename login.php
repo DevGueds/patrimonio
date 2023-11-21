@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="login-principal">
-        <div class="login1">
-            <h1>Área para imagem da prefeitura</h1>
+        <div class="login-esquerda">
+            <h1>SISTEMA DE GERENCIAMENTO<br>DE PATRIMÔNIO</h1>
         </div>
         <div class="login2"></div>
         <div class="area-login">
