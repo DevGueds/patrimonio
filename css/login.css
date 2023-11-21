@@ -1,3 +1,9 @@
 body{
     margin: 0;
 }
+
+.login-principal{
+    width: 100vw;
+    height: 100vh;
+    background: #ff0000;
+}
