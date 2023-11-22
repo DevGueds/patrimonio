@@ -37,7 +37,7 @@ body{
 .menu-lateral a{
     display: block;
     width: 180px;
-    height: 35px;
+    height: 33px;
     background: transparent;
     border: 1.5px solid #0f2a69;
     border-radius: 4px;
@@ -50,26 +50,26 @@ body{
     margin: 7px;
 }
 
-.menu-lateral a > span{
+.menu-lateral a{
     display: inline-flex;
     align-items: center;
     gap: 12px;
     height: 30px;
-    padding: 0 16px 0 12px;
+    padding: 16px 10px;
+    text-decoration: none;
     
 }
 
-.menu-lateral a:hover > span{
-    width: 180px;
-    height: 33px;
-    border-radius: 1px;
-    border: 0;
-    background: #1C3B85;
+.menu-lateral a:hover{
+    width: 178px;
+    height: 30px;
+    background: #0f2a69;
 }
 
 .menu-lateral a i{
     position: relative;
     font-size: 13px;
+    padding-right: 5px;
 }
 
 .menu-lateral a span{

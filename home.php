@@ -16,18 +16,18 @@
     </header>
 
     <nav>
-      <a href="http://">
+      <a href="#" class="ativo">
         <span>
           <i class="bi bi-box-seam"></i>
           <span>Patrimônios</span>
       </a>
-      <a href="http://">
+      <a href="#">
         <span>
           <i class="bi bi-people"></i>
           <span>Usuários</span>
         </span>
         </a>
-        <a href="http://">
+        <a href="#">
         <span>
           <i class="bi bi-file-earmark-text"></i>
           <span>Relatório</span>
