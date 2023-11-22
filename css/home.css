@@ -16,9 +16,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 150px;
+    width: 200px;
     height: 100%;
-    padding: 40px 10px 30px 10px;
+    padding: 40px 10px;
     background: #274A9D;
 }
 
@@ -34,11 +34,12 @@ body{
 
 }
 
-.menu-lateral button{
-    width: 130px;
+.menu-lateral a{
+    display: block;
+    width: 180px;
     height: 35px;
     background: transparent;
-    border: 1.5px solid #1C3B85;
+    border: 1.5px solid #0f2a69;
     border-radius: 4px;
     font-family: inherit;
     font-size: 8pt; 
@@ -49,7 +50,7 @@ body{
     margin: 7px;
 }
 
-.menu-lateral button > span{
+.menu-lateral a > span{
     display: inline-flex;
     align-items: center;
     gap: 12px;
@@ -58,21 +59,21 @@ body{
     
 }
 
-.menu-lateral button:hover > span{
-    width: 128px;
+.menu-lateral a:hover > span{
+    width: 180px;
     height: 33px;
     border-radius: 1px;
     border: 0;
     background: #1C3B85;
 }
 
-.menu-lateral button i{
+.menu-lateral a i{
     position: relative;
     font-size: 13px;
 }
 
-.menu-lateral button span{
-    font-size: 13px;
+.menu-lateral a span{
+    font-size: 14px;
     font-weight: 400;
 }
 
