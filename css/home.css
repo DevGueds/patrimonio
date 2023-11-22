@@ -78,13 +78,13 @@ body{
 }
 
 .principal{
-    margin-left: 170px;
+    margin-left: 250px;
     margin-right: 6px;
 }
 
 .principal > h1{
     margin-top: 50px;
     color: #26324B;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 500;
 }
