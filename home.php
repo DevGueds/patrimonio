@@ -33,11 +33,17 @@
           <span>Relatório</span>
         </span>
         </a>
+        <a href="http://">
+        <span>
+          <span class="sair">Sair</span>
+        </span>
+        </a>
     </nav>
   </aside>
 
   <main class="principal">
     <h1>Olá Vinicius</h1>
+    <hr class="linha">
 
 
   </main>
