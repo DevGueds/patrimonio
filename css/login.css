@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
 
 body {
     margin: 0;
+    font-family: 'Inter',sans-serif;
+    
 }
 
 .login-principal{
@@ -21,8 +26,15 @@ body {
     flex-direction: column;
 }
 
-.login-esquerda > h1{
+.login-esquerda > h1{ /* SISTEMA DE GERENCIAMENTO DE PAGAMENTO*/
     color: #394475;
+    font-size: 20pt;
+    text-align: center;
+}
+
+.login-esquerda-imagem {
+    width: 35vh;
+    margin: 10px;
 }
 
 .login-direita{
@@ -44,33 +56,45 @@ body {
     background-color: #f8f8f8 ;
 }
 
-.area-login > h1{ /* Falta definir a margem e o peso da fonte*/
+.area-login > h1{  /* ENTRAR */
     color: #26324B;
+    font-weight: 600px;
+    font-size: 18pt;
+    margin: 20;
 }
 
 .textfield{
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    padding: 7px;
 }
 
-.textfield > input{ /*Configuração do input - Falta definir o tamanho da fonte*/ 
+.textfield > input{ 
     width: 100%;
     border: solid 2px #E5EBF1 ;
-    border-radius: 10px;
-    padding: 15px;
+    border-radius: 4px;
+    padding: 10px;
     background-color: #fff;
-    color: 7B828D;
+    color: #7B828D;
+    font-size: 12pt;
+
+
 }
 
 .btn-login{
     width: 50%;
-    padding: 16px 0px;
-    margin: 25px;
+    padding: 15px 0px;
+    margin: 20px;
     border: none;
     border-radius: 4px;
     outline: none;
     background: #274A9D;
+    font-weight: 600;
+    font-size: 12pt;
     color: #fff;
+    cursor: pointer;
+    
 }

@@ -11,11 +11,12 @@
 <body>
     <div class="login-principal">
         <div class="login-esquerda">
+            <img src="img/logo.png" class="login-esquerda-imagem" alt="Logotipo Prefeitura">
             <h1>SISTEMA DE GERENCIAMENTO <br>DE PAGAMENTO</h1>
         </div>
         <div class="login-direita">
             <div class="area-login">
-                <h1>ENTRAR</h1>
+                <h1>Entrar</h1>
                 <div class="textfield">
                     <input type="text" name="usuario" placeholder="Usuário">
                 </div>
