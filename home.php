@@ -12,7 +12,7 @@
 <body>
   <aside class="menu-lateral">
     <header class="menu-lateral-header">
-      <img class="logo-img" src="img/logo.png" alt="Logotipo Prefeitura">
+      <img class="logo-img" src="img/logo-2.png" alt="Logotipo Prefeitura">
     </header>
 
     <nav>
@@ -38,6 +38,7 @@
 
   <main class="principal">
     <h1>Olá Vinicius</h1>
+
 
   </main>
 </body>
