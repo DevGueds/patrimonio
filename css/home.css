@@ -7,7 +7,7 @@
 body{
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #274A9D;
+    background-color: #f8f8f8;
     color: #fff;
 }
 .menu-lateral{
@@ -15,15 +15,75 @@ body{
     top: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 240px;
+    align-items: center;
+    width: 150px;
     height: 100%;
     padding: 40px 10px 30px 10px;
-    border-right: 1px solid #f8f8f8;
+    background: #274A9D;
+}
+
+.menu-lateral-header{
+    width: 100%;
+    margin-bottom: 16px;
 }
 
 .logo-img{
     width: 50%;
     min-height: 50%;
+    
 
+}
+
+.menu-lateral button{
+    width: 130px;
+    height: 35px;
+    background: transparent;
+    border: 1.5px solid #1C3B85;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 8pt; 
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    margin: 7px;
+}
+
+.menu-lateral button > span{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 30px;
+    padding: 0 16px 0 12px;
+    
+}
+
+.menu-lateral button:hover > span{
+    width: 128px;
+    height: 33px;
+    border-radius: 1px;
+    border: 0;
+    background: #1C3B85;
+}
+
+.menu-lateral button i{
+    position: relative;
+    font-size: 13px;
+}
+
+.menu-lateral button span{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.principal{
+    margin-left: 170px;
+    margin-right: 6px;
+}
+
+.principal > h1{
+    margin-top: 50px;
+    color: #26324B;
+    font-size: 18px;
+    font-weight: 500;
 }

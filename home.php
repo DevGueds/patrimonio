@@ -34,5 +34,10 @@
           </button>       
         </nav>
     </aside>
+
+    <main class="principal">
+        <h1>Olá Vinicius</h1>
+
+    </main>
 </body>
 </html>
