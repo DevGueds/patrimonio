@@ -15,16 +15,14 @@
             <h1>SISTEMA DE GERENCIAMENTO <br>DE PAGAMENTO</h1>
         </div>
         <div class="login-direita">
-            <div class="area-login">
+            <form class="area-login">
                 <h1>Entrar</h1>
-                <div class="textfield">
-                    <input type="text" name="usuario" placeholder="Usuário">
-                </div>
-                <div class="textfield">
-                    <input type="password" name="senha" placeholder="Senha">
-                </div>
+                <div class="area-formulario" >
+                <input type="text" name="usuario" placeholder="Usuário">
+                <input type="password" name="senha" placeholder="Senha">
                 <button class="btn-login">Entrar</button>
-            </div>
+                </div>
+            </form>
         </div>
     </div>
 </body>
