@@ -10,6 +10,10 @@ body{
     background-color: #f8f8f8;
     color: #fff;
 }
+.conteiner{
+    margin: auto;
+    max-width: 1920px;
+}
 .menu-lateral{
     position: fixed;
     top: 0;
@@ -20,6 +24,9 @@ body{
     height: 100%;
     padding: 40px 10px;
     background: #274A9D;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .menu-lateral-header{
@@ -58,6 +65,12 @@ body{
     padding: 16px 10px;
     text-decoration: none;
     
+}
+
+.ativo{
+    width: 178px;
+    height: 30px;
+    background: #0f2a69 !important;
 }
 
 .menu-lateral a:hover{

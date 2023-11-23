@@ -10,43 +10,48 @@
 </head>
 
 <body>
-  <aside class="menu-lateral">
-    <header class="menu-lateral-header">
-      <img class="logo-img" src="img/logo-2.png" alt="Logotipo Prefeitura">
-    </header>
+  <div class="conteiner">
+    <aside class="menu-lateral">
+      <div>
+        <header class="menu-lateral-header">
+          <img class="logo-img" src="img/logo-2.png" alt="Logotipo Prefeitura">
+        </header>
 
-    <nav>
-      <a href="#" class="ativo">
-        <span>
-          <i class="bi bi-box-seam"></i>
-          <span>Patrimônios</span>
-      </a>
+        <nav>
+          <a href="#" class="ativo">
+            <span>
+              <i class="bi bi-box-seam"></i>
+              <span>Patrimônios</span>
+          </a>
+          <a href="#">
+            <span>
+              <i class="bi bi-people"></i>
+              <span>Usuários</span>
+            </span>
+          </a>
+          <a href="#">
+            <span>
+              <i class="bi bi-file-earmark-text"></i>
+              <span>Relatório</span>
+            </span>
+          </a>
+        </nav>
+      </div>
       <a href="#">
         <span>
-          <i class="bi bi-people"></i>
-          <span>Usuários</span>
+          <i class="bi bi-box-arrow-right"></i>
+          <span>Sair</span>
         </span>
-        </a>
-        <a href="#">
-        <span>
-          <i class="bi bi-file-earmark-text"></i>
-          <span>Relatório</span>
-        </span>
-        </a>
-        <a href="http://">
-        <span>
-          <span class="sair">Sair</span>
-        </span>
-        </a>
-    </nav>
-  </aside>
+      </a>
+    </aside>
 
-  <main class="principal">
-    <h1>Olá Vinicius</h1>
-    <hr class="linha">
+    <main class="principal">
+      <h1>Olá, Vinicius</h1>
+      <hr class="linha">
 
 
-  </main>
+    </main>
+  </div>
 </body>
 
 </html>
