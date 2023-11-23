@@ -37,11 +37,17 @@ body{
 .logo-img{
     width: 90%;
     min-height: 90%;
-    
+}
+.menu-lateral a{
+    font-family: inherit;
+    font-size: 14px; 
+    cursor: pointer;
+    padding: 0;
+    color: #fff;
+    text-decoration: none;
 
 }
-
-.menu-lateral a{
+.menu-lateral .link{
     display: block;
     width: 180px;
     height: 33px;
@@ -57,7 +63,7 @@ body{
     margin: 7px;
 }
 
-.menu-lateral a{
+.menu-lateral .link{
     display: inline-flex;
     align-items: center;
     gap: 12px;
@@ -73,19 +79,19 @@ body{
     background: #0f2a69 !important;
 }
 
-.menu-lateral a:hover{
+.menu-lateral .link:hover{
     width: 178px;
     height: 30px;
     background: #0f2a69;
 }
 
-.menu-lateral a i{
+.menu-lateral .link i{
     position: relative;
     font-size: 13px;
     padding-right: 5px;
 }
 
-.menu-lateral a span{
+.menu-lateral .link span{
     font-size: 14px;
     font-weight: 400;
 }
@@ -104,8 +110,6 @@ body{
 
 .sair{
     position: absolute;
-    
-    
 }
 
 hr{
