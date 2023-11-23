@@ -12,15 +12,18 @@
     <div class="login-principal">
         <div class="login-esquerda">
             <img src="img/logo.png" class="login-esquerda-imagem" alt="Logotipo Prefeitura">
-            <h1>SISTEMA DE GERENCIAMENTO <br>DE PAGAMENTO</h1>
+            <h1>SISTEMA DE GERENCIAMENTO <br>DE PATRIMÔNIO</h1>
         </div>
         <div class="login-direita">
-            <form class="area-login">
+            <form class="area-login" action="validarLogin.php" method="POST" >
                 <h1>Entrar</h1>
-                <div class="area-formulario" >
-                <input type="text" name="usuario" placeholder="Usuário">
-                <input type="password" name="senha" placeholder="Senha">
-                <button class="btn-login">Entrar</button>
+                <!-- <form action="validarLogin.php" method="POST"> -->
+                    <div class="area-formulario" >
+                    <input type="text" name="usuario" placeholder="Usuário">
+                    <input type="password" name="senha" placeholder="Senha">
+                    <input class="inputSubmit" type="submit"  name="submit" value="Entar">
+                <!-- <button class="btn-login">Entrar</button> -->
+                <!-- </form> -->
                 </div>
             </form>
         </div>

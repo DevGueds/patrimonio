@@ -1,3 +1,15 @@
+<?php
+  session_start();
+  // print_r($_SESSION);
+  if((!isset($_SESSION['usuario']) == true) and (!isset($_SESSION['senha']) == true))
+  {
+      unset($_SESSION['usuario']);
+      unset($_SESSION['senha']);
+      header('Location: login.php');
+  }
+  $logado = $_SESSION['usuario'];
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -46,7 +58,9 @@
     </aside>
 
     <main class="principal">
-      <h1>Olá, Vinicius</h1>
+      <?php
+        echo "<h1>Olá, $logado</h1>";
+      ?>
       <div class="btn-cadastrar">
         <a href="#">
         <button class="cadastrar">Cadastrar</button>

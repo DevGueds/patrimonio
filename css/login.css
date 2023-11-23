@@ -62,6 +62,7 @@ body {
     /* margin: 20; */
 }
 
+
 .area-formulario{
     width: 50%;
     height: 200px;
@@ -81,16 +82,16 @@ body {
 
 }
 
-.btn-login{
+.inputSubmit{
     width: 100%;
     padding: 15px 0px;
     border: none;
     border-radius: 4px;
     outline: none;
-    background: #274A9D;
+    background: #274A9D !important;
     font-weight: 600;
     font-size: 12pt;
-    color: #fff;
+    color: #fff !important;
     cursor: pointer;
     
 }
