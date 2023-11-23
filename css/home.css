@@ -11,6 +11,7 @@
     --cinza: #f8f8f8;
     --azul-escuro: #26324B;
     --branco: #fff;
+    --cinza: #E5EBF1;
 }
 
 body{
@@ -142,4 +143,6 @@ hr{
 .pesquisar{
     display: flex;
     justify-content: right;
+    border-radius: 5px;
+    
 }
