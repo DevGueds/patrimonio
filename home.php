@@ -49,7 +49,7 @@
           </a>
         </nav>
       </div>
-      <a href="#">
+      <a href="sair.php">
         <span>
           <i class="bi bi-box-arrow-right"></i>
           <span>Sair</span>
