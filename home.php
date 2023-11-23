@@ -47,9 +47,19 @@
 
     <main class="principal">
       <h1>Olá, Vinicius</h1>
+      <div class="btn-cadastrar">
+        <a href="#">
+        <button class="cadastrar">Cadastrar</button>
+        </a>
+      </div>
       <hr class="linha">
-
-
+      <div class="pesquisar">
+        <input type="search" class="form-control" placeholder="Buscar..." id="pesquisar">
+        <button class="btn btn-pesquisar">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+      <h1>Lista de usuários</h1>
     </main>
   </div>
 </body>

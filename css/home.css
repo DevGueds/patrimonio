@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+:root{
+    --verde: #03C874;
+    --azul: #274A9D;
+    --azul-hover: #0f2a69;
+    --cinza: #f8f8f8;
+    --azul-escuro: #26324B;
+    --branco: #fff;
+}
+
 body{
     margin: 0;
     font-family: 'Inter', sans-serif;
@@ -114,4 +123,23 @@ body{
 
 hr{
     border: 1px solid #E5EBF1;
+}
+
+.cadastrar{
+    background: var(--verde);
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    color: var(--branco);
+    font-family: inherit;
+}
+
+.btn-cadastrar{
+    display: flex;
+    justify-content: right;
+}
+
+.pesquisar{
+    display: flex;
+    justify-content: right;
 }
