@@ -159,9 +159,20 @@ body {
     font-weight: bold;
 }
 
+.relatorio {
+    background: var(--azul-3);
+    padding: 0.375rem 1.25rem;
+    border: none;
+    border-radius: 0.25rem;
+    color: var(--branco);
+    font-family: inherit;
+    font-weight: bold;
+}
+
 .btn-cadastrar {
     display: flex;
     justify-content: right;
+    gap: 0.625rem;
 }
 
 .header-tabela {
@@ -200,7 +211,6 @@ body {
     border-collapse: collapse;
 }
 
-/* .tabela th, */
 .tabela td {
     margin-bottom: 0.625rem initial !important;
 }
@@ -222,6 +232,8 @@ body {
     background: var(--branco);
     color: var(--azul-escuro) !important;
     border-bottom: 0.9375rem solid var(--cinza);
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
 }
 
 .tabela-linha .primeira-linha {

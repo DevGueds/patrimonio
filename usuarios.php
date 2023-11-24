@@ -30,12 +30,12 @@ $logado = $_SESSION['usuario'];
         </header>
 
         <nav>
-          <a href="#" class="link ativo">
+          <a href="home.php" class="link">
             <span>
               <i class="bi bi-box-seam"></i>
               <span>Patrimônios</span>
           </a>
-          <a href="usuarios.php" class="link">
+          <a href="#" class="link ativo">
             <span>
               <i class="bi bi-people"></i>
               <span>Usuários</span>
@@ -66,13 +66,12 @@ $logado = $_SESSION['usuario'];
           ?>
         </h1>
         <div class="btn-cadastrar">
-          <button onclick="abrirModal2()" class="relatorio">Relatorio</button>
           <button onclick="abrirModal()" class="cadastrar">Cadastrar</button>
         </div>
       </div>
       <hr class="linha">
       <div class="header-tabela">
-        <h3 class="header-tabela-titulo">Bens cadastrados</h1>
+        <h3 class="header-tabela-titulo">Lista de usuários</h1>
           <div class="pesquisar">
             <input type="search" class="form-control" placeholder="Buscar..." id="pesquisar">
             <button class="btn btn-pesquisar">
@@ -85,14 +84,12 @@ $logado = $_SESSION['usuario'];
         <thead>
           <th class="header-tabela-text pl-2">Código</th>
           <th class="header-tabela-text">Nome</th>
-          <th class="header-tabela-text">Local</th>
           <th class="header-tabela-text">Ação</th>
         </thead>
         <tbody>
           <tr class="tabela-linha">
             <td class="primeira-linha  pl-2">#0298302</td>
-            <td>Televisao</td>
-            <td>SMS</td>
+            <td>Fulano de tal</td>
             <td class="texto-direita ultima-linha">
               <button class="btn btn-deletar">
                 Deletar
@@ -104,8 +101,7 @@ $logado = $_SESSION['usuario'];
           </tr>
           <tr class="tabela-linha">
             <td class="primeira-linha  pl-2">#0298302</td>
-            <td>Nobreak</td>
-            <td>Pedreira</td>
+            <td>Fulano de tal</td>
             <td class="texto-direita ultima-linha">
               <button class="btn btn-deletar">
                 Deletar
@@ -123,92 +119,34 @@ $logado = $_SESSION['usuario'];
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Cadastrar Patrimônio</h5>
+              <h5 class="modal-title">Cadastrar usuário</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <!-- <p>Viniguededs | Marcar paragráfo.</p> -->
               <form class="row g-3" id="cad-usuario-form">
-                <div class="col-md-4">
-                  <label for="inputQtd" class="form-label">Quantidade</label>
-                  <input type="number" class="form-control" id="inputQtd">
-                </div>
-                <div class="col-md-4">
-                  <label for="inputNPatrimonio" class="form-label">N° Patrimônio</label>
-                  <input type="text" class="form-control" id="inputNPatrimonio">
-                </div>
-                <div class="col-md-4">
-                  <label for="inputValor" class="form-label">Valor</label>
-                  <input type="number" class="form-control" id="inputValor">
-                </div>
-                <div class="col-md-12">
-                  <label for="inputDesc" class="form-label">Descricao</label>
-                  <input type="text" class="form-control" id="inputDesc">
+                <div class="col-md-6">
+                  <label for="inputNome" class="form-label">Nome</label>
+                  <input type="text" class="form-control" id="inputNome">
                 </div>
                 <div class="col-md-6">
-                  <label for="inputData" class="form-label">Data Aquisicao</label>
-                  <input type="date" class="form-control" id="inputData">
+                  <label for="inputPermissao" class="form-label">Permissao</label>
+                  <select class="form-select" id="inputPermissao">
+                    <option value="administrador">Administrador</option>
+                  </select>
                 </div>
                 <div class="col-md-6">
-                  <label for="inputFAquisicao" class="form-label">Forma Aquisicao</label>
-                  <input type="text" class="form-control" id="inputFAquisicao">
+                  <label for="inputUsuario" class="form-label">Usuário</label>
+                  <input type="text" class="form-control" id="inputUsuario">
                 </div>
-                <div class="col-md-4">
-                  <label for="inputFornecedor" class="form-label">Fornecedor</label>
-                  <input type="text" class="form-control" id="inputFornecedor">
-                </div>
-                <div class="col-md-4">
-                  <label for="inputEmpenho" class="form-label">Empenho</label>
-                  <input type="text" class="form-control" id="inputEmpenho">
-                </div>
-                <div class="col-md-4">
-                  <label for="inputLocal" class="form-label">Local</label>
-                  <input type="text" class="form-control" id="inputLocal">
+                <div class="col-md-6">
+                  <label for="inputSenha" class="form-label">Senha</label>
+                  <input type="password" class="form-control" id="inputSenha">
                 </div>
               </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn cadastrar btn-success">Salvar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Modal Viniguedes-->
-
-      <!-- Modal -->
-      <div class="modal" id="modal2" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Relatorio</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <!-- <p>Viniguededs | Marcar paragráfo.</p> -->
-              <form class="row g-3" id="cad-usuario-form">
-                <div class="col-md-12">
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1">Detalhado</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">Simples</label>
-                  </div>
-                  
-                </div>
-                <div class="col-md-6">
-                  <label for="inputLocal" class="form-label">Local</label>
-                  <select class="form-select" id="inputLocal">
-                    <option value="pedreira">Pedreira</option>
-                    <option value="pedreira">SMS</option>
-                    <option value="pedreira">Inussum</option>
-                  </select>
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn cadastrar btn-success">Gerar</button>
             </div>
           </div>
         </div>
