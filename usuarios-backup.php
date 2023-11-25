@@ -14,6 +14,8 @@ $sql = "SELECT * FROM cadastro_usuario ORDER BY id_usuario DESC";
 $result = $conexao->query($sql);
 
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -91,30 +93,15 @@ $result = $conexao->query($sql);
         <thead>
           <th class="header-tabela-text pl-2">Código</th>
           <th class="header-tabela-text">Nome</th>
-          <!-- <th class="header-tabela-text">Usuário</th> -->
           <th class="header-tabela-text">Ação</th>
-        
         </thead>
         <tbody>
 
         <!-- Inicio Sessão PHP -->
-            <?php
-              while($user_data = mysqli_fetch_assoc($result)){
-                echo "<tr>";
-                echo "<td>".$user_data['id_usuario']."</td>";
-                echo "<td>".$user_data['nome']."</td>";
-                echo "<td>
-                    <a class='btn btn-deletar' href='#'>Deletar</a>
-                    <a class='btn btn-editar' href='#'>Editar</a>
-                </td>";
-                // echo "<td>".$user_data['usuario']."</td>";
-                echo "</tr>";
-              }
             
-            ?> 
 
         <!-- Fim Sessão PHP -->
-          <!-- <tr class="tabela-linha">
+          <tr class="tabela-linha">
             <td class="primeira-linha  pl-2">#0298302</td>
             <td>Fulano de tal</td>
             <td class="texto-direita ultima-linha">
@@ -137,7 +124,7 @@ $result = $conexao->query($sql);
                 Editar
               </button>
             </td>
-          </tr> -->
+          </tr>
         </tbody>
       </table>
 
@@ -158,7 +145,7 @@ $result = $conexao->query($sql);
                 </div>
                 <div class="col-md-6">
                   <label for="inputPermissao" class="form-label">Permissao</label>
-                  <select name="select" class="form-select" id="inputPermissao">
+                  <select class="form-select" id="inputPermissao">
                     <option value="administrador">Administrador</option>
                   </select>
                 </div>

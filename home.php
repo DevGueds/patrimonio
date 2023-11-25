@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once('config.php');
 // print_r($_SESSION);
 if ((!isset($_SESSION['usuario']) == true) and (!isset($_SESSION['senha']) == true)) {
   unset($_SESSION['usuario']);
@@ -7,6 +8,11 @@ if ((!isset($_SESSION['usuario']) == true) and (!isset($_SESSION['senha']) == tr
   header('Location: login.php');
 }
 $logado = $_SESSION['usuario'];
+
+$sql_bens = "SELECT * FROM cadastro_patrimonio ORDER BY id_patrimonio DESC";
+
+$result_bens = $conexao->query($sql_bens);
+
 ?>
 
 <!DOCTYPE html>
@@ -89,7 +95,27 @@ $logado = $_SESSION['usuario'];
           <th class="header-tabela-text">Ação</th>
         </thead>
         <tbody>
-          <tr class="tabela-linha">
+          <!-- Inicio Sessão PHP -->
+          <?php
+          
+          while($bens_data = mysqli_fetch_assoc($result_bens)){
+            echo "<tr>";
+            echo "<td>".$bens_data['id_patrimonio']."</td>";
+            echo "<td>".$bens_data['descricao']."</td>";
+            echo "<td>".$bens_data['local']."</td>";
+            echo "<td>
+                <a class='btn btn-deletar' href='#'>Deletar</a>
+                <a class='btn btn-editar' href='#'>Editar</a>
+            </td>";
+            // echo "<td>".$user_data['usuario']."</td>";
+            echo "</tr>";
+          }
+          
+          ?>
+          <!-- Fim Sessão PHP -->
+
+
+          <!-- <tr class="tabela-linha">
             <td class="primeira-linha  pl-2">#0298302</td>
             <td>Televisao</td>
             <td>SMS</td>
@@ -114,7 +140,7 @@ $logado = $_SESSION['usuario'];
                 Editar
               </button>
             </td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
 
