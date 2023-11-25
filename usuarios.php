@@ -151,7 +151,8 @@ $result = $conexao->query($sql);
             </div>
             <div class="modal-body">
               <!-- <p>Viniguededs | Marcar paragráfo.</p> -->
-              <form action="usuarios.php" method="POST" class="row g-3" id="cad-usuario-form">
+              <form class="row g-3" id="cad-usuario-form">
+                <span id="msgAlertErroCad"></span>
                 <div class="col-md-6">
                   <label for="inputNome" class="form-label">Nome</label>
                   <input type="text" name="nome" class="form-control" id="inputNome">
@@ -173,7 +174,8 @@ $result = $conexao->query($sql);
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" name="salvar" class="btn cadastrar btn-success">Salvar</button>
+              <!-- <button type="submit" name="salvar" class="btn cadastrar btn-success">Salvar</button> -->
+              <input type="submit" class="btn cadastrar btn-success"  id="cad-usuario-btn" value="Salvar">
             </div>
           </div>
         </div>
@@ -185,6 +187,7 @@ $result = $conexao->query($sql);
   <!-- Área de Script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="js/modal.js"></script>
+  <script src="js/cadastro.js"></script>
 </body>
 
 </html>
