@@ -5,3 +5,4 @@ function abrirModal(){
 function abrirModal2(){
     new bootstrap.Modal("#modal2").show()
 }
+

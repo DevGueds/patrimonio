@@ -6,6 +6,8 @@
 
 :root {
     --verde: #03C874;
+    --verde-1: #e4fef5;
+    --verde-2: #e8fbf4;
     --azul: #274A9D;
     --azul-hover: #0f2a69;
     --cinza: #f8f8f8;
@@ -205,6 +207,12 @@ body {
     background-color: var(--azul-1) !important;
     border: 0.0625rem solid var(--azul-2) !important;
     color: var(--azul-3) !important;
+}
+
+.btn-visualizar {
+    background-color: var(--verde-1) !important;
+    border: 0.0625rem solid var(--verde-2) !important;
+    color: var(--verde) !important;
 }
 
 .tabela {
