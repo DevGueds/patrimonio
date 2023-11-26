@@ -19,10 +19,10 @@ $permissao = $_POST['permissao'];
     // $cad_usuario = $conexao->prepare($query_usuario);
     // $cad_usuario->bindParam(':nome, $dados['nome'])
     
-    $senha_cripto = password_hash($senha,PASSWORD_DEFAULT);
+ 
 
     $query_usuario = mysqli_query($conexao, "INSERT INTO cadastro_usuario(nome,usuario,senha,permissao) 
-    VALUES('$nome', '$usuario','$senha_cripto','$permissao')");
+    VALUES('$nome', '$usuario','$senha','$permissao')");
 
         
 
