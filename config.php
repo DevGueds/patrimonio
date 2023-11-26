@@ -7,6 +7,9 @@
 
     $conexao = new mysqli($dbHost, $dbUsername,$dbPassword,$dbName);
 
+    // $conexao = new PDO("mysql:host=$dbhost;dbname=". $dbName, $dbUsername,$dbPassword);
+
+
     // if($conexao->connect_errno)
     // {
     //     echo "Erro";

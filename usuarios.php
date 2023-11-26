@@ -171,11 +171,11 @@ $result = $conexao->query($sql);
                   <label for="inputSenha" class="form-label">Senha</label>
                   <input type="password" name="senha" class="form-control" id="inputSenha">
                 </div>
+                <div class="modal-footer">
+                  <!-- <button type="submit" name="salvar" class="btn cadastrar btn-success">Salvar</button> -->
+                  <input type="submit" class="btn cadastrar btn-success"  id="cad-usuario-btn" value="Salvar">
+                </div>
               </form>
-            </div>
-            <div class="modal-footer">
-              <!-- <button type="submit" name="salvar" class="btn cadastrar btn-success">Salvar</button> -->
-              <input type="submit" class="btn cadastrar btn-success"  id="cad-usuario-btn" value="Salvar">
             </div>
           </div>
         </div>
