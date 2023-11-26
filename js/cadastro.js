@@ -1,4 +1,5 @@
 const cadForm = document.getElementById("cad-usuario-form")
+const msgAlertErroCad = document.getElementById("msgAlertErroCad")
 // console.log(cadForm)
 
 cadForm.addEventListener("submit", async (e) => {
@@ -17,5 +18,11 @@ cadForm.addEventListener("submit", async (e) => {
     const resposta = await dados.json()
 
     console.log(resposta)
+
+    if(resposta['erro']){
+        msgAlertErroCad.innerHTML = resposta['msg']
+    }else{
+        
+    }
 })
     
