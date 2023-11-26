@@ -140,7 +140,7 @@ $result = $conexao->query($sql);
           </tr> -->
         </tbody>
       </table>
-
+      
       <!-- Modal -->
       <div class="modal" id="modal" tabindex="-1">
         <div class="modal-dialog">
@@ -153,6 +153,7 @@ $result = $conexao->query($sql);
               <!-- <p>Viniguededs | Marcar paragráfo.</p> -->
               <form class="row g-3" id="cad-usuario-form">
                 <span id="msgAlertErroCad"></span>
+                <span id="msgAlert"></span>
                 <div class="col-md-6">
                   <label for="inputNome" class="form-label">Nome</label>
                   <input type="text" name="nome" class="form-control" id="inputNome" required>
