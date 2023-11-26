@@ -4,6 +4,7 @@ include_once "config.php";
 $nome = $_POST['nome'];
 $usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
+$permissao = $_POST['permissao'];
 
 // $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
@@ -17,9 +18,13 @@ $senha = $_POST['senha'];
     // $query_usuario = "INSERT INTO cadastro_usuario (nome, usuario, senha) VALUES (:nome, :usuario, :senha)";
     // $cad_usuario = $conexao->prepare($query_usuario);
     // $cad_usuario->bindParam(':nome, $dados['nome'])
-    $query_usuario = mysqli_query($conexao, "INSERT INTO cadastro_usuario(nome,usuario,senha) 
-    VALUES('$nome', '$usuario','$senha')");
+    
+    $senha_cripto = password_hash($senha,PASSWORD_DEFAULT);
 
+    $query_usuario = mysqli_query($conexao, "INSERT INTO cadastro_usuario(nome,usuario,senha,permissao) 
+    VALUES('$nome', '$usuario','$senha_cripto','$permissao')");
+
+        
 
     // $retorna = ['erro' => false, 'msg' => "<div class='alert alert-success' role='alert'> Usuário cadastrado com sucesso!</div>"];
 // }

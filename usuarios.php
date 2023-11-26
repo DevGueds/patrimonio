@@ -155,21 +155,22 @@ $result = $conexao->query($sql);
                 <span id="msgAlertErroCad"></span>
                 <div class="col-md-6">
                   <label for="inputNome" class="form-label">Nome</label>
-                  <input type="text" name="nome" class="form-control" id="inputNome">
+                  <input type="text" name="nome" class="form-control" id="inputNome" required>
                 </div>
                 <div class="col-md-6">
                   <label for="inputPermissao" class="form-label">Permissao</label>
-                  <select name="select" class="form-select" id="inputPermissao">
+                  <select name="permissao" class="form-select" id="inputPermissao">
+                    <option value="usuario">Usuário</option>
                     <option value="administrador">Administrador</option>
                   </select>
                 </div>
                 <div class="col-md-6">
                   <label for="inputUsuario" class="form-label">Usuário</label>
-                  <input type="text" name="usuario" class="form-control" id="inputUsuario">
+                  <input type="text" name="usuario" class="form-control" id="inputUsuario" required>
                 </div>
                 <div class="col-md-6">
                   <label for="inputSenha" class="form-label">Senha</label>
-                  <input type="password" name="senha" class="form-control" id="inputSenha">
+                  <input type="password" name="senha" class="form-control" id="inputSenha" required>
                 </div>
                 <div class="modal-footer">
                   <!-- <button type="submit" name="salvar" class="btn cadastrar btn-success">Salvar</button> -->
