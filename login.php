@@ -11,7 +11,7 @@
 <body>
     <div class="login-principal">
         <div class="login-esquerda">
-            <img src="img/logo.png" class="login-esquerda-imagem" alt="Logotipo Prefeitura">
+            <img src="img/logo-2.png" class="login-esquerda-imagem" alt="Logotipo Prefeitura">
             <h1>SISTEMA DE GERENCIAMENTO <br>DE PATRIMÔNIO</h1>
         </div>
         <div class="login-direita">
