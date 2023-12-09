@@ -104,8 +104,8 @@ $result = $conexao->query($sql);
                 echo "<td>".$user_data['id_usuario']."</td>";
                 echo "<td>".$user_data['nome']."</td>";
                 echo "<td>
-                    <a class='btn btn-deletar' href='delete.php?id=$user_data[id_usuario]'>Deletar</a>
-                    <a class='btn btn-editar' href='edit.php?id=$user_data[id_usuario]'>Editar</a>
+                    <a class='btn btn-deletar' href='delete.php?id=$user_data[id_usuario]'\" onclick=\"return confirm('Confirma exclusão do registro?')\">Deletar</a>
+                    <a class='btn btn-editar' href='#'\" onclick=\"abrirModal()\">Editar</a>
                 </td>";
                 // echo "<td>".$user_data['usuario']."</td>";
                 echo "</tr>";
