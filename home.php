@@ -104,8 +104,8 @@ $result_bens = $conexao->query($sql_bens);
             echo "<td>".$bens_data['descricao']."</td>";
             echo "<td>".$bens_data['local']."</td>";
             echo "<td>
-                <a class='btn btn-deletar' href='#'>Deletar</a>
-                <a class='btn btn-editar' href='#'>Editar</a>
+                <a class='btn btn-deletar' href='deletarpatrimonio.php?id=$bens_data[id_patrimonio]'\" onclick=\"return confirm('Confirma exclusão do registro?')\">Deletar</a>
+                <a class='btn btn-editar' href='#'\" onclick=\"abrirModal()\">Editar</a>
             </td>";
             // echo "<td>".$user_data['usuario']."</td>";
             echo "</tr>";
@@ -154,47 +154,50 @@ $result_bens = $conexao->query($sql_bens);
             </div>
             <div class="modal-body">
               <!-- <p>Viniguededs | Marcar paragráfo.</p> -->
-              <form class="row g-3" id="cad-usuario-form">
+              <form class="row g-3" id="cad-patrimonio-form">
+                  <span id="msgAlertErroCadPatrimonio"></span>
+                  <span id="msgAlertPatrimonio"></span>
                 <div class="col-md-4">
                   <label for="inputQtd" class="form-label">Quantidade</label>
-                  <input type="number" class="form-control" id="inputQtd">
+                  <input type="number" name="quantidade"  class="form-control" id="inputQtd" required>
                 </div>
                 <div class="col-md-4">
                   <label for="inputNPatrimonio" class="form-label">N° Patrimônio</label>
-                  <input type="text" class="form-control" id="inputNPatrimonio">
+                  <input type="text" name="patrimonio" class="form-control" id="inputNPatrimonio" required>
                 </div>
                 <div class="col-md-4">
                   <label for="inputValor" class="form-label">Valor</label>
-                  <input type="number" class="form-control" id="inputValor">
+                  <input type="number" name="valor" class="form-control" id="inputValor" required>
                 </div>
                 <div class="col-md-12">
                   <label for="inputDesc" class="form-label">Descricao</label>
-                  <input type="text" class="form-control" id="inputDesc">
+                  <input type="text" name="descricao" class="form-control" id="inputDesc" required>
                 </div>
                 <div class="col-md-6">
                   <label for="inputData" class="form-label">Data Aquisicao</label>
-                  <input type="date" class="form-control" id="inputData">
+                  <input type="date" name="data-aquisicao" class="form-control" id="inputData" required>
                 </div>
                 <div class="col-md-6">
                   <label for="inputFAquisicao" class="form-label">Forma Aquisicao</label>
-                  <input type="text" class="form-control" id="inputFAquisicao">
+                  <input type="text" name="forma-aquisicao" class="form-control" id="inputFAquisicao" required>
                 </div>
                 <div class="col-md-4">
                   <label for="inputFornecedor" class="form-label">Fornecedor</label>
-                  <input type="text" class="form-control" id="inputFornecedor">
+                  <input type="text" name="fornecedor" class="form-control" id="inputFornecedor" required>
                 </div>
                 <div class="col-md-4">
                   <label for="inputEmpenho" class="form-label">Empenho</label>
-                  <input type="text" class="form-control" id="inputEmpenho">
+                  <input type="text" name="empenho" class="form-control" id="inputEmpenho" required>
                 </div>
                 <div class="col-md-4">
                   <label for="inputLocal" class="form-label">Local</label>
-                  <input type="text" class="form-control" id="inputLocal">
+                  <input type="text" name="org" class="form-control" id="inputLocal" required>
                 </div>
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn cadastrar btn-success">Salvar</button>
+              <!-- <button type="button" class="btn cadastrar btn-success">Salvar</button> -->
+              <input type="submit" class="btn cadastrar btn-success"  id="cad-patrimonio-btn" value="Salvar1">
             </div>
           </div>
         </div>
@@ -211,7 +214,9 @@ $result_bens = $conexao->query($sql_bens);
             </div>
             <div class="modal-body">
               <!-- <p>Viniguededs | Marcar paragráfo.</p> -->
-              <form class="row g-3" id="cad-usuario-form">
+              <form class="row g-3" id="cad-relatorio-form">
+                <!-- <span id="msgAlertErroCad"></span>
+                <span id="msgAlert"></span> -->
                 <div class="col-md-12">
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
@@ -246,6 +251,7 @@ $result_bens = $conexao->query($sql_bens);
   <!-- Área de Script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="js/modal.js"></script>
+  <script src="js/patrimonio.js"></script>
 </body>
 
 </html>
