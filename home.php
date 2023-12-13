@@ -97,12 +97,12 @@ $result_bens = $conexao->query($sql_bens);
         <tbody>
           <!-- Inicio Sessão PHP -->
           <?php
-          
-          while($bens_data = mysqli_fetch_assoc($result_bens)){
+
+          while ($bens_data = mysqli_fetch_assoc($result_bens)) {
             echo "<tr>";
-            echo "<td>".$bens_data['id_patrimonio']."</td>";
-            echo "<td>".$bens_data['descricao']."</td>";
-            echo "<td>".$bens_data['local']."</td>";
+            echo "<td>" . $bens_data['id_patrimonio'] . "</td>";
+            echo "<td>" . $bens_data['descricao'] . "</td>";
+            echo "<td>" . $bens_data['local'] . "</td>";
             echo "<td>
                 <a class='btn btn-deletar' href='deletarpatrimonio.php?id=$bens_data[id_patrimonio]'\" onclick=\"return confirm('Confirma exclusão do registro?')\">Deletar</a>
                 <a class='btn btn-editar' href='#'\" onclick=\"abrirModal()\">Editar</a>
@@ -110,7 +110,7 @@ $result_bens = $conexao->query($sql_bens);
             // echo "<td>".$user_data['usuario']."</td>";
             echo "</tr>";
           }
-          
+
           ?>
           <!-- Fim Sessão PHP -->
 
@@ -155,11 +155,11 @@ $result_bens = $conexao->query($sql_bens);
             <div class="modal-body">
               <!-- <p>Viniguededs | Marcar paragráfo.</p> -->
               <form class="row g-3" id="cad-patrimonio-form">
-                  <span id="msgAlertErroCadPatrimonio"></span>
-                  <span id="msgAlertPatrimonio"></span>
+                <span id="msgAlertErroCad"></span>
+                <span id="msgAlert"></span>
                 <div class="col-md-4">
                   <label for="inputQtd" class="form-label">Quantidade</label>
-                  <input type="number" name="quantidade"  class="form-control" id="inputQtd" required>
+                  <input type="number" name="quantidade" class="form-control" id="inputQtd" required>
                 </div>
                 <div class="col-md-4">
                   <label for="inputNPatrimonio" class="form-label">N° Patrimônio</label>
@@ -193,11 +193,11 @@ $result_bens = $conexao->query($sql_bens);
                   <label for="inputLocal" class="form-label">Local</label>
                   <input type="text" name="org" class="form-control" id="inputLocal" required>
                 </div>
+                <div class="modal-footer">
+                  <!-- <button type="button" class="btn cadastrar btn-success">Salvar</button> -->
+                  <input type="submit" class="btn cadastrar btn-success" id="cad-patrimonio-btn" value="Salvar">
+                </div>
               </form>
-            </div>
-            <div class="modal-footer">
-              <!-- <button type="button" class="btn cadastrar btn-success">Salvar</button> -->
-              <input type="submit" class="btn cadastrar btn-success"  id="cad-patrimonio-btn" value="Salvar1">
             </div>
           </div>
         </div>
@@ -226,7 +226,7 @@ $result_bens = $conexao->query($sql_bens);
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                     <label class="form-check-label" for="inlineRadio2">Simples</label>
                   </div>
-                  
+
                 </div>
                 <div class="col-md-6">
                   <label for="inputLocal" class="form-label">Local</label>

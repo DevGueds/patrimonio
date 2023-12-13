@@ -2,7 +2,7 @@
 
 include_once "config.php";
 $descricao = $_POST['descricao'];
-$quantidade = $POST['quantidade'];
+$quantidade = $_POST['quantidade'];
 $patrimonio = $_POST['patrimonio'];
 $valor = $_POST['valor'];
 $data_aquisicao = $_POST['data-aquisicao'];
@@ -15,10 +15,10 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 if(empty($dados['descricao'])){
      $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'> Erro: Preencha o campo descricao!</div>"];
-}elseif (empty($dados['usuario'])){
-     $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'> Erro: Preencha o campo usuário!</div>"];
-}elseif (empty($dados['senha'])){
-    $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'> Erro: Preencha o campo senha!</div>"];
+}elseif (empty($dados['quantidade'])){
+     $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'> Erro: Preencha o campo quantidade!</div>"];
+}elseif (empty($dados['patrimonio'])){
+    $retorna = ['erro' => true, 'msg' => "<div class='alert alert-danger' role='alert'> Erro: Preencha o campo numero do patrimonio!</div>"];
 }else{
     // $query_usuario = "INSERT INTO cadastro_usuario (nome, usuario, senha) VALUES (:nome, :usuario, :senha)";
     // $cad_usuario = $conexao->prepare($query_usuario);

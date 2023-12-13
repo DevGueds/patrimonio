@@ -1,20 +1,20 @@
-const cadFormPatrimonio = document.getElementById("cad-patrimonio-form")
-const msgAlertErroCadPatrimonio = document.getElementById("msgAlertErroCadPatrimonio")
-const msgAlertPatrimonio = document.getElementById("msgAlertPatrimonio")
+const cadForm = document.getElementById("cad-patrimonio-form")
+const msgAlertErroCad = document.getElementById("msgAlertErroCad")
+const msgAlert = document.getElementById("msgAlert")
 // const cadModal = new bootstrap.Modal(document.getElementById("modal"))
-console.log(cadFormPatrimonio)
+console.log(cadForm)
 
-cadFormPatrimonio.addEventListener("submit", async (e) => {
+cadForm.addEventListener("submit", async (e) => {
     e.preventDefault()
 
     console.log(e)
 
-    const dadosFormPatrimonio = new FormData(cadFormPatrimonio)
+    const dadosForm = new FormData(cadForm)
 
 
     const dados = await fetch("cad_patrimonio.php", {
         method: "POST",
-        body: dadosFormPatrimonio 
+        body: dadosForm 
     })
 
     const resposta = await dados.json()
@@ -22,10 +22,10 @@ cadFormPatrimonio.addEventListener("submit", async (e) => {
     // console.log(resposta)
 
     if(resposta['erro']){
-        msgAlertErroCadPatrimonio.innerHTML = resposta['msg']
+        msgAlertErroCad.innerHTML = resposta['msg']
     }else{
-        msgAlertPatrimonio.innerHTML = resposta['msg']
-        cadFormPatrimonio.reset();
+        msgAlert.innerHTML = resposta['msg']
+        cadForm.reset();
         // cadModal.hide()
     }
 })
