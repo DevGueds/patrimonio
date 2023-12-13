@@ -31,7 +31,7 @@ if(empty($dados['descricao'])){
 
         
 
-    $retorna = ['erro' => false, 'msg' => "<div class='alert alert-success' role='alert'> Usuário cadastrado com sucesso!</div>"];
+    $retorna = ['erro' => false, 'msg' => "<div class='alert alert-success' role='alert'>Patrimonio cadastrado com sucesso!</div>"];
 }
 
 echo json_encode($retorna);
