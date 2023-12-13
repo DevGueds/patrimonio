@@ -32,7 +32,7 @@ $result_bens = $conexao->query($sql_bens);
     <aside class="menu-lateral">
       <div>
         <header class="menu-lateral-header">
-          <img class="logo-img" src="img/logo-2.png" alt="Logotipo Prefeitura">
+          <img class="logo-img" src="img/logo.png" alt="Logotipo Prefeitura">
         </header>
 
         <nav>
