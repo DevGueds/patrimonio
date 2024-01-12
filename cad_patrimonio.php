@@ -1,5 +1,4 @@
 <?php
-
 include_once "config.php";
 $descricao = $_POST['descricao'];
 $quantidade = $_POST['quantidade'];
@@ -9,7 +8,8 @@ $data_aquisicao = $_POST['data-aquisicao'];
 $forma_aquisicao = $_POST['forma-aquisicao'];
 $fornecedor = $_POST['fornecedor'];
 $empenho = $_POST['empenho'];
-$org = $_POST['org'];
+
+$local = $_POST['org'];
 
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
@@ -23,11 +23,14 @@ if(empty($dados['descricao'])){
     // $query_usuario = "INSERT INTO cadastro_usuario (nome, usuario, senha) VALUES (:nome, :usuario, :senha)";
     // $cad_usuario = $conexao->prepare($query_usuario);
     // $cad_usuario->bindParam(':nome, $dados['nome'])
-    
- 
-    // $query_usuario_pes = "SELECT id_usuario FROM usuario WHERE usuario=usuario LIMIT 1"; - Verificar o PDO 
-    $query_patrimonio = mysqli_query($conexao, "INSERT INTO cadastro_patrimonio(descricao, quantidade, numero_patrimonio, valor, data_aquisicao, forma_aquisicao, fornecedor, empenho, org, data_cadastro) 
-    VALUES('$descricao', '$quantidade','$patrimonio','$valor', '$data_aquisicao', '$forma_aquisicao', '$fornecedor', '$empenho', '$org')");
+session_start();
+
+    $dataAtual = date("Y-m-d H:i:s");
+    $id_usuario=$_SESSION['id_usuario'];
+    $sql = "INSERT INTO cadastro_patrimonio(descricao, quantidade, numero_patrimonio, valor, data_aquisicao, forma_aquisicao, fornecedor, empenho,id_usuario,data_cadastro,local) 
+    VALUES('$descricao', '$quantidade','$patrimonio','$valor', '$data_aquisicao', '$forma_aquisicao', '$fornecedor', '$empenho','$id_usuario','$dataAtual','$local')";
+
+    $query_patrimonio = mysqli_query($conexao, $sql);
 
         
 

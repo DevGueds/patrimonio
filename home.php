@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 include_once('config.php');
 // print_r($_SESSION);
@@ -32,7 +33,7 @@ $result_bens = $conexao->query($sql_bens);
     <aside class="menu-lateral">
       <div>
         <header class="menu-lateral-header">
-          <img class="logo-img" src="img/logo.png" alt="Logotipo Prefeitura">
+          <img class="logo-img" src="img/logo-2.png" alt="Logotipo Prefeitura">
         </header>
 
         <nav>
@@ -191,7 +192,13 @@ $result_bens = $conexao->query($sql_bens);
                 </div>
                 <div class="col-md-4">
                   <label for="inputLocal" class="form-label">Local</label>
-                  <input type="text" name="org" class="form-control" id="inputLocal" required>
+
+                    <select class="form-select" id="inputLocal" name="org" required>
+                        <option value="pedreira">Pedreira</option>
+                        <option value="sms">SMS</option>
+                        <option value="inussum">Inussum</option>
+                    </select>
+
                 </div>
                 <div class="modal-footer">
                   <!-- <button type="button" class="btn cadastrar btn-success">Salvar</button> -->
@@ -214,33 +221,41 @@ $result_bens = $conexao->query($sql_bens);
             </div>
             <div class="modal-body">
               <!-- <p>Viniguededs | Marcar paragráfo.</p> -->
-              <form class="row g-3" id="cad-relatorio-form">
+              <form class="row g-3" id="cad-relatorio-form" action="relatorio.php">
                 <!-- <span id="msgAlertErroCad"></span>
                 <span id="msgAlert"></span> -->
                 <div class="col-md-12">
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <input class="form-check-input" type="radio" name="tipo_relatorio" id="inlineRadio1" value="Detalhado">
                     <label class="form-check-label" for="inlineRadio1">Detalhado</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <input class="form-check-input" type="radio" name="tipo_relatorio" id="inlineRadio2" value="Simples">
                     <label class="form-check-label" for="inlineRadio2">Simples</label>
                   </div>
 
                 </div>
                 <div class="col-md-6">
                   <label for="inputLocal" class="form-label">Local</label>
-                  <select class="form-select" id="inputLocal">
-                    <option value="pedreira">Pedreira</option>
-                    <option value="pedreira">SMS</option>
-                    <option value="pedreira">Inussum</option>
+                  <select class="form-select" id="inputLocal" name="local">
+                        <option value="">Todos</option>
+                        <option value="pedreira">Pedreira</option>
+                        <option value="sms">SMS</option>
+                        <option value="inussum">Inussum</option>
                   </select>
+
+                    <div class="modal-footer">
+                        <button onclick="gerarPDF()" type="submit" class="btn cadastrar btn-success" >Gerar</button>
+                    </div>
                 </div>
+
               </form>
+
+                <form method="post" action="relatorio.php">
+
+                </form>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn cadastrar btn-success">Gerar</button>
-            </div>
+
           </div>
         </div>
       </div>
@@ -252,6 +267,7 @@ $result_bens = $conexao->query($sql_bens);
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="js/modal.js"></script>
   <script src="js/patrimonio.js"></script>
+
 </body>
 
 </html>

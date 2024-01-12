@@ -19,6 +19,7 @@
         $sql = "SELECT * FROM cadastro_usuario WHERE usuario = '$usuario' and senha = '$senha'";
         
         $result = $conexao->query($sql);
+        $data_usuario = mysqli_fetch_assoc($result);
 
         if(mysqli_num_rows($result) < 1)
         {
@@ -30,6 +31,7 @@
         }
         else{
         //    print_r('Usuário encontrado');
+            $_SESSION['id_usuario'] = $data_usuario['id_usuario'];
             $_SESSION['usuario'] = $usuario;
             $_SESSION['senha'] = $senha;
             header('Location: home.php');

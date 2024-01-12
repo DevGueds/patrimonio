@@ -2,7 +2,7 @@ const cadForm = document.getElementById("cad-patrimonio-form")
 const msgAlertErroCad = document.getElementById("msgAlertErroCad")
 const msgAlert = document.getElementById("msgAlert")
 // const cadModal = new bootstrap.Modal(document.getElementById("modal"))
-console.log(cadForm)
+// console.log(cadForm)
 
 cadForm.addEventListener("submit", async (e) => {
     e.preventDefault()
