@@ -1,32 +1,33 @@
-const cadForm = document.getElementById("cad-usuario-form")
-const msgAlertErroCad = document.getElementById("msgAlertErroCad")
-const msgAlert = document.getElementById("msgAlert")
-// const cadModal = new bootstrap.Modal(document.getElementById("modal"))
-console.log(cadForm)
+const cadForm = document.getElementById("cad-usuario-form");
+const msgAlertErroCad = document.getElementById("msgAlertErroCad");
+const msgAlert = document.getElementById("msgAlert");
+
+console.log(cadForm);
 
 cadForm.addEventListener("submit", async (e) => {
-    e.preventDefault()
-    alert('2');
-    // console.log(e)
+    e.preventDefault();
 
-    const dadosForm = new FormData(cadForm)
+    const dadosForm = new FormData(cadForm);
 
+    try {
+        const dados = await fetch("cad_usuarios.php", {
+            method: "POST",
+            body: dadosForm 
+        });
 
-    const dados = await fetch("cad_usuarios.php", {
-        method: "POST",
-        body: dadosForm 
-    })
+        if (dados.ok) {
+            const resposta = await dados.json();
 
-    const resposta = await dados.json()
-
-    // console.log(resposta)
-
-    if(resposta['erro']){
-        msgAlertErroCad.innerHTML = resposta['msg']
-    }else{
-        msgAlert.innerHTML = resposta['msg']
-        cadForm.reset();
-        // cadModal.hide()
+            if (resposta['erro']) {
+                msgAlertErroCad.innerHTML = resposta['msg'];
+            } else {
+                msgAlert.innerHTML = resposta['msg'];
+                cadForm.reset();
+            }
+        } else {
+            console.error("Erro na requisição:", dados.status, dados.statusText);
+        }
+    } catch (erro) {
+        console.error("Erro durante a requisição:", erro);
     }
-})
-    
+});
