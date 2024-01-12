@@ -114,30 +114,6 @@ $result = $conexao->query($sql);
             ?> 
 
         <!-- Fim Sessão PHP -->
-          <!-- <tr class="tabela-linha">
-            <td class="primeira-linha  pl-2">#0298302</td>
-            <td>Fulano de tal</td>
-            <td class="texto-direita ultima-linha">
-              <button class="btn btn-deletar">
-                Deletar
-              </button>
-              <button class="btn btn-editar">
-                Editar
-              </button>
-            </td>
-          </tr>
-          <tr class="tabela-linha">
-            <td class="primeira-linha  pl-2">#0298302</td>
-            <td>Fulano de tal</td>
-            <td class="texto-direita ultima-linha">
-              <button class="btn btn-deletar">
-                Deletar
-              </button>
-              <button class="btn btn-editar">
-                Editar
-              </button>
-            </td>
-          </tr> -->
         </tbody>
       </table>
       

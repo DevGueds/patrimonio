@@ -5,9 +5,11 @@ const msgAlert = document.getElementById("msgAlert")
 // console.log(cadForm)
 
 cadForm.addEventListener("submit", async (e) => {
-    e.preventDefault()
 
-    console.log(e)
+    
+    e.preventDefault()
+    
+    // console.log(e)
 
     const dadosForm = new FormData(cadForm)
 
@@ -18,7 +20,7 @@ cadForm.addEventListener("submit", async (e) => {
     })
 
     const resposta = await dados.json()
-
+  
     // console.log(resposta)
 
     if(resposta['erro']){

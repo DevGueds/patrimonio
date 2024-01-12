@@ -77,6 +77,9 @@ $result_bens = $conexao->query($sql_bens);
           <button onclick="abrirModal()" class="cadastrar">Cadastrar</button>
         </div>
       </div>
+
+      
+
       <hr class="linha">
       <div class="header-tabela">
         <h3 class="header-tabela-titulo">Bens cadastrados</h1>
@@ -106,42 +109,14 @@ $result_bens = $conexao->query($sql_bens);
             echo "<td>" . $bens_data['local'] . "</td>";
             echo "<td>
                 <a class='btn btn-deletar' href='deletarpatrimonio.php?id=$bens_data[id_patrimonio]'\" onclick=\"return confirm('Confirma exclusão do registro?')\">Deletar</a>
-                <a class='btn btn-editar' href='#'\" onclick=\"abrirModal()\">Editar</a>
+                <a class='btn btn-editar' href='editar.php?id=$bens_data[id_patrimonio]'\">Editar</a>
             </td>";
-            // echo "<td>".$user_data['usuario']."</td>";
             echo "</tr>";
           }
 
           ?>
           <!-- Fim Sessão PHP -->
-
-
-          <!-- <tr class="tabela-linha">
-            <td class="primeira-linha  pl-2">#0298302</td>
-            <td>Televisao</td>
-            <td>SMS</td>
-            <td class="texto-direita ultima-linha">
-              <button class="btn btn-deletar">
-                Deletar
-              </button>
-              <button class="btn btn-editar">
-                Editar
-              </button>
-            </td>
-          </tr>
-          <tr class="tabela-linha">
-            <td class="primeira-linha  pl-2">#0298302</td>
-            <td>Nobreak</td>
-            <td>Pedreira</td>
-            <td class="texto-direita ultima-linha">
-              <button class="btn btn-deletar">
-                Deletar
-              </button>
-              <button class="btn btn-editar">
-                Editar
-              </button>
-            </td>
-          </tr> -->
+          
         </tbody>
       </table>
 

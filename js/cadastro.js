@@ -6,8 +6,8 @@ console.log(cadForm)
 
 cadForm.addEventListener("submit", async (e) => {
     e.preventDefault()
-
-    console.log(e)
+    alert('2');
+    // console.log(e)
 
     const dadosForm = new FormData(cadForm)
 
